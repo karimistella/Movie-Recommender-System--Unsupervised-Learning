@@ -105,7 +105,7 @@ def main():
         st.write("Describe your winning approach on this page")
     
     if page_selection == "Meet The Team":
-        st.tittle("Meet The Team")
+        st.title("Meet The Team")
         st.markdown("""
         Bowls Analytics has five talented Data Scientists who have worked on this recommender systemcists
 
@@ -115,7 +115,7 @@ def main():
         3. Winfred
         4. Lungisa
         5. Odutuwa
-         
+
         """ )
 
     # You may want to add more sections here for aspects such as an EDA,
