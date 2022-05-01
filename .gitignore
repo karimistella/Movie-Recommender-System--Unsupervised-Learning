@@ -136,3 +136,15 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+
+# Files in resources except some
+
+resources/data/genome_scores.csv
+resources/data/genome_tags.csv
+resources/data/movies.csv
+resources/data/tags.csv
+resources/data/imdb_data.csv
+resources/data/links.csv
+resources/data/test.csv
+resources/data/train.csv
