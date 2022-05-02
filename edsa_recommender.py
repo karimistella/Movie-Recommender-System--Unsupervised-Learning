@@ -117,11 +117,11 @@ def main():
         best performing unsupervised models.
 
         These are :
-        1. Stella
-        2. Bidemi
-        3. Winfred
-        4. Lungisa
-        5. Odutuwa
+        1. Michael Dairo 
+        2. Stella Njuki 
+        3. Winfred Mutinda 
+        4. Lungisa Nhlakanipho Joctrey 
+        5. Odutayo Odufuwa
 
         """ )
     if page_selection == "About Us":
