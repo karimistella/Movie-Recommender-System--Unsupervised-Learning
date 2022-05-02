@@ -492,9 +492,11 @@ def content_model(movie_list,top_n=10):
 
 
     #### TOP RATED 100 MOVIES ####
+
+    top_rated = data.sort_values(by='rating_count', ascending=False).head(100)
     
     # sort values by average rating 
-    top_rated_100 = data.sort_values(by=['rating_count','ave_rating'], ascending=False).head(100)
+    top_rated_100 = top_rated.sort_values(by='ave_rating', ascending=False)
 
     # convert to list
     top_rated_100 = top_rated_100['title'].tolist()
