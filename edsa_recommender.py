@@ -27,6 +27,7 @@
 """
 # Streamlit dependencies
 import streamlit as st
+from PIL import Image
 
 # Data handling dependencies
 import pandas as pd
@@ -46,11 +47,14 @@ def main():
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
     page_options = ["Recommender System","Solution Overview", "Meet The Team", "About Us"]
-
+    my_gif = Image.open('resources/imgs/Bowls_logo.jpeg')
+    st.sidebar.image(my_gif)
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
     # -------------------------------------------------------------------
     page_selection = st.sidebar.selectbox("Choose Option", page_options)
+    
+
     if page_selection == "Recommender System":
         # Header contents
         st.write('# Movie Recommender Engine')
@@ -106,8 +110,11 @@ def main():
     
     if page_selection == "Meet The Team":
         st.title("Meet The Team")
+        image = Image.open('resources/imgs/meettheteam.jpg')
+        st.image(image)
         st.markdown("""
-        Bowls Analytics has five talented Data Scientists who have worked on this recommender systemcists
+        At Bowls Analytics we have five talented data scientists who are not afraid to get their hands dirty cleaning the data and building
+        best performing unsupervised models.
 
         These are :
         1. Stella
@@ -117,6 +124,13 @@ def main():
         5. Odutuwa
 
         """ )
+    if page_selection == "About Us":
+        st.title("About Us")
+        my_gif = Image.open('resources/imgs/Bowls_logo.jpeg')
+        st.image(my_gif)
+        
+        
+       
 
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
