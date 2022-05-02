@@ -127,7 +127,7 @@ def main():
     if page_selection == "About Us":
         st.title("About Us")
         my_gif = Image.open('resources/imgs/Bowls_logo.jpeg')
-        st.image(my_gif)
+        st.image(my_gif, use_column_width = 'always')
         
         
        
