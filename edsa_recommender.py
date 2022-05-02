@@ -48,7 +48,7 @@ def main():
     # you are welcome to add more options to enrich your app.
     page_options = ["Recommender System","Solution Overview", "Meet The Team", "About Us"]
     my_gif = Image.open('resources/imgs/Bowls_logo.jpeg')
-    st.sidebar.image(my_gif)
+    st.sidebar.image(my_gif, width = 300)
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
     # -------------------------------------------------------------------
