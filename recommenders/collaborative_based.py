@@ -18,10 +18,7 @@
 
     You must however change its contents (i.e. add your own collaborative
     filtering algorithm), as well as altering/adding any other functions
-    as part of your improvement.
-
-    ---------------------------------------------------------------------
-
+    as part of your improvement. 
     Description: Provided within this file is a baseline collaborative
     filtering algorithm for rating predictions on Movie data.
 
@@ -43,7 +40,7 @@ ratings_df = pd.read_csv('resources/data/ratings.csv')
 ratings_df.drop(['timestamp'], axis=1,inplace=True)
 
 # We make use of an SVD model trained on a subset of the MovieLens 10k dataset.
-model=pickle.load(open('resources/models/SVD.pkl', 'rb'))
+model=pickle.load(open('resources/models/SVD.pickle', 'rb'))
 
 def prediction_item(item_id):
     """Map a given favourite movie to users within the
