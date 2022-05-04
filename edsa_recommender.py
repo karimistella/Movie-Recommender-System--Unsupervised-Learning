@@ -128,6 +128,11 @@ def main():
         st.title("About Us")
         my_gif = Image.open('resources/imgs/Bowls_logo.jpeg')
         st.image(my_gif, use_column_width = 'always')
+        st.markdown("""
+        Bowls Analytic is a leading Data Science firm in Africa. Our main goal is to build proplem solving algorithims and models 
+        to make thew world a better place to live in and to make life a little easier to enjoy. 
+        """)
+        
         
         
        
