@@ -45,9 +45,9 @@ from recommenders.content_based import content_model
 import seaborn as sns
 
 
-movies_meta = 'resources/data/movies_metadata.csv'
+movies_meta = 'resources/data/movies.csv'
 # Data Loading
-title_list = load_movie_titles('resources/data/movies_metadata.csv')
+title_list = load_movie_titles('resources/data/movies.csv')
 
 # App declaration
 def main():
