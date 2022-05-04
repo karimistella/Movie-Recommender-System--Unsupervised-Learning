@@ -32,14 +32,22 @@ from PIL import Image
 # Data handling dependencies
 import pandas as pd
 import numpy as np
+from matplotlib import pyplot as plt
+import seaborn as sns
+import os
 
 # Custom Libraries
 from utils.data_loader import load_movie_titles
 from recommenders.collaborative_based import collab_model
 from recommenders.content_based import content_model
 
+#Visualitation Libraries
+import seaborn as sns
+
+
+movies_meta = 'resources/data/movies_metadata.csv'
 # Data Loading
-title_list = load_movie_titles('resources/data/movies.csv')
+title_list = load_movie_titles('resources/data/movies_metadata.csv')
 
 # App declaration
 def main():
@@ -68,7 +76,7 @@ def main():
 
         # User-based preferences
         st.write('### Enter Your Three Favorite Movies')
-        movie_1 = st.selectbox('Fisrt Option',title_list[14930:15200])
+        movie_1 = st.selectbox('First Option',title_list[14930:15200])
         movie_2 = st.selectbox('Second Option',title_list[25055:25255])
         movie_3 = st.selectbox('Third Option',title_list[21100:21200])
         fav_movies = [movie_1,movie_2,movie_3]
@@ -108,6 +116,25 @@ def main():
     if page_selection == "Solution Overview":
         st.title("Solution Overview")
         st.write("Describe your winning approach on this page")
+        st.header("Movies")
+        TopRated = st.radio("Top Rated", 
+        ('Movies', 'Directors', 'Actors'))
+
+        #EDA
+        if TopRated == "Movies":
+            def eda_data(dataset):
+                df = pd.read_csv(os.path.join(dataset))
+                return df
+            if st.checkbox("Preview Dataset"):
+                data = eda_data(movies_meta)
+                if st.button("Head"):
+                    st.write(data.head())
+
+            
+
+            #axes = df.plot.bar(x='original_title', y='budget')
+            
+
     
     if page_selection == "Meet The Team":
         st.title("Meet The Team")
@@ -131,11 +158,13 @@ def main():
         st.image(my_gif, use_column_width = 'always')
         st.markdown("""
         Bowls Analytic is a leading Data Science firm in Africa. Our main goal is to build proplem solving algorithims and models 
-        to make thew world a better place to live in and to make life a little easier to enjoy.
+        to make thew world a better place to live in a nd to make life a little easier to enjoy.
 
         Contact: info@bowlsanalytic.com
          
         """)
+
+
         
         
         
