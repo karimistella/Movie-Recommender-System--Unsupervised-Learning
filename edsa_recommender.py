@@ -49,6 +49,7 @@ def main():
     page_options = ["Recommender System","Solution Overview", "Meet The Team", "About Us"]
     my_gif = Image.open('resources/imgs/Bowls_logo.jpeg')
     st.sidebar.image(my_gif, width = 200)
+    
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
     # -------------------------------------------------------------------
@@ -130,7 +131,8 @@ def main():
         st.image(my_gif, use_column_width = 'always')
         st.markdown("""
         Bowls Analytic is a leading Data Science firm in Africa. Our main goal is to build proplem solving algorithims and models 
-        to make thew world a better place to live in and to make life a little easier to enjoy. 
+        to make thew world a better place to live in and to make life a little easier to enjoy.
+         
         """)
         
         
