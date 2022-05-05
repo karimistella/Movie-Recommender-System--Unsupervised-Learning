@@ -26,6 +26,7 @@
 
 """
 # Streamlit dependencies
+from matplotlib.cbook import Stack
 import streamlit as st
 from PIL import Image
 
@@ -235,7 +236,22 @@ def main():
 
             
             st.header("Data Visualization")
-           
+
+            st.markdown("""
+            We are displaying movies grouped by budget.
+            """)
+
+            fig= plt.figure(figsize=(9, 7))
+
+            sns.histplot(
+                data = meta_copy,
+                x ='budget', 
+                hue ="revenue",
+                multiple = "stack"
+            )
+
+            st.pyplot(fig)
+            
             
 
 
@@ -264,7 +280,7 @@ def main():
     if page_selection == "About Us":
         st.title("About Us")
         my_gif = Image.open('resources/imgs/Bowls_logo.jpeg')
-        st.image(my_gif, use_column_width = 'always')
+        st.image(my_gif)
         st.markdown("""
         Bowls Analytic is a leading Data Science firm in Africa. Our main goal is to build proplem solving algorithims and models 
         to make thew world a better place to live in a nd to make life a little easier to enjoy.
