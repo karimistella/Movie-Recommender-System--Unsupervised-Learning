@@ -261,8 +261,8 @@ def main():
         my_gif = Image.open('resources/imgs/Bowls_logo.jpeg')
         st.image(my_gif)
         st.markdown("""
-        Bowls Analytic is a leading Data Science firm in Africa. Our main goal is to build proplem solving algorithims and models 
-        to make thew world a better place to live in and to make life a little easier to enjoy. 
+        Bowls Analytic is a leading Data Science firm in Africa. Our main goal is to build problem solving algorithims and models 
+        to make the world a better place to live in and to make life a little easier to enjoy. 
         With our models, we can help you better target your customers by suggesting to them products they are likely to purchase based on their preferences or recent purchases.
         In doing so, we can increase your annual revenue by 15% 
 
