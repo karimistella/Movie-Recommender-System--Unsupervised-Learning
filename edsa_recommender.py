@@ -235,24 +235,6 @@ def main():
                 st.write(meta_copy.describe())
 
             
-            st.header("Data Visualization")
-
-            st.markdown("""
-            
-            """)
-
-            fig= plt.figure(figsize=15)
-
-            sns.pairplot(
-                meta_copy[['budget', 'revenue', 'runtime']], corner=True
-            )
-
-            st.pyplot(fig)
-            
-            
-
-
-
 
             #axes = df.plot.bar(x='original_title', y='budget')
 
