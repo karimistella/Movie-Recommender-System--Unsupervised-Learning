@@ -235,19 +235,7 @@ def main():
 
             
             st.header("Data Visualization")
-            # Question 1: how many movies belong to a collection?
-
-            collection = meta_copy['belongs_to_collection'].value_counts()
-
-            ax = sns.barplot(collection.index, collection.values)
-            for p in ax.patches:
-                percentage = '{:.1f}%'.format(100 * p.get_height()/len(meta_copy['belongs_to_collection'].tolist()))
-                x = p.get_x() + p.get_width()
-                y = p.get_height()
-                ax.annotate(percentage, (x, y),ha='right', fontsize=15)
-            plt.show()
-
-
+           
             
 
 
