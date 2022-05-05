@@ -611,5 +611,4 @@ def content_model(movie_list,top_n=10):
     based_on_production = get_recommendations(production)
 
 
-    return (top_250_movies, top_rated_100, most_popular_100, based_on_cast_crew, 
-            based_on_full_desc, based_on_tags, based_on_production)
+    return based_on_cast_crew
