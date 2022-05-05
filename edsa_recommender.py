@@ -238,10 +238,10 @@ def main():
             st.header("Data Visualization")
 
             st.markdown("""
-            We are displaying movies grouped by budget.
+            
             """)
 
-            fig= plt.figure(figsize=(9, 7))
+            fig= plt.figure(figsize=15)
 
             sns.pairplot(
                 meta_copy[['budget', 'revenue', 'runtime']], corner=True
