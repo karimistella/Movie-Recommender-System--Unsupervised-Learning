@@ -148,3 +148,5 @@ resources/data/imdb_data.csv
 resources/data/links.csv
 resources/data/test.csv
 resources/data/train.csv
+resources/models/models.pkl
+resources/models/models.zip
