@@ -246,7 +246,7 @@ def main():
         st.image(image)
         st.markdown("""
         At Bowls Analytics we have five talented data scientists who are not afraid to get their hands dirty cleaning the data and building
-        best performing unsupervised models.
+        best performing supervised and unsupervised models.
 
         These are :
         1. Michael Dairo 
