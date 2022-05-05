@@ -243,11 +243,8 @@ def main():
 
             fig= plt.figure(figsize=(9, 7))
 
-            sns.histplot(
-                data = meta_copy,
-                x ='budget', 
-                hue ="revenue",
-                multiple = "stack"
+            sns.pairplot(
+                meta_copy[['budget', 'revenue', 'runtime']], corner=True
             )
 
             st.pyplot(fig)
